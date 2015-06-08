@@ -1,0 +1,94 @@
+Cmp-Mod V01 Created by Cvpcb (2015-05-26 BZR 5680)-product   date = 2015 June 08, Monday 22:07:11
+
+BeginCmp
+TimeStamp = /55743C22;
+Reference = AFF101;
+ValeurCmp = 7SEGMENTS-CC;
+IdModule  = ClockFootprints:SC08-11SURKWA;
+EndCmp
+
+BeginCmp
+TimeStamp = /55743C76;
+Reference = AFF102;
+ValeurCmp = 7SEGMENTS-CC;
+IdModule  = ClockFootprints:SC08-11SURKWA;
+EndCmp
+
+BeginCmp
+TimeStamp = /55743CA2;
+Reference = AFF103;
+ValeurCmp = 7SEGMENTS-CC;
+IdModule  = ClockFootprints:SC08-11SURKWA;
+EndCmp
+
+BeginCmp
+TimeStamp = /55743CD4;
+Reference = AFF104;
+ValeurCmp = 7SEGMENTS-CC;
+IdModule  = ClockFootprints:SC08-11SURKWA;
+EndCmp
+
+BeginCmp
+TimeStamp = /5575DF02;
+Reference = C101;
+ValeurCmp = 10u;
+IdModule  = Capacitors_SMD:c_elec_4x5.8;
+EndCmp
+
+BeginCmp
+TimeStamp = /5575BAA8;
+Reference = C102;
+ValeurCmp = 0.1u;
+IdModule  = Capacitors_SMD:C_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5575E769;
+Reference = D101;
+ValeurCmp = Colon1;
+IdModule  = LEDs:LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5575E7AF;
+Reference = D102;
+ValeurCmp = Colon2;
+IdModule  = LEDs:LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5575E7D7;
+Reference = D103;
+ValeurCmp = Alarm;
+IdModule  = LEDs:LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5575E804;
+Reference = D104;
+ValeurCmp = Auto;
+IdModule  = LEDs:LED-0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5575F20D;
+Reference = P101;
+ValeurCmp = CONN_01X05;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /5575BA42;
+Reference = R101;
+ValeurCmp = 25K;
+IdModule  = Resistors_SMD:R_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5575B838;
+Reference = U101;
+ValeurCmp = MAX7221;
+IdModule  = SMD_Packages:SOIC-24;
+EndCmp
+
+EndListe
