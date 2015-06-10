@@ -5,4 +5,4 @@
 *.kicad_pcb-bak
 .DS_Store
 *.swp
-
+*.zip
