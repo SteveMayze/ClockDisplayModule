@@ -5,6 +5,12 @@ D Decoder 3 to 8 (active low outputs)
 K TTL DECOD DECOD8
 $ENDCMP
 #
+$CMP BC856BS
+D BC856, 65V Vce, 0.1A Ic, PNP, SOT-363
+K BC856 BC556 Equivalent
+F http://www.fairchildsemi.com/ds/BC/BC856.pdf
+$ENDCMP
+#
 $CMP MAX7221
 D Serially Interfaced, 8-Digit LED Display Drivers
 $ENDCMP
