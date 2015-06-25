@@ -92,17 +92,6 @@ C
 Text Label 4800 4000 0    60   ~ 0
 D
 NoConn ~ 4750 4400
-$Comp
-L CONN_01X05 P101
-U 1 1 5575F20D
-P 6750 1650
-F 0 "P101" H 6750 1950 50  0000 C CNN
-F 1 "CONN_01X05" V 6850 1650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x05" H 6750 1650 60  0001 C CNN
-F 3 "" H 6750 1650 60  0000 C CNN
-	1    6750 1650
-	1    0    0    -1  
-$EndComp
 Text GLabel 6200 1450 0    60   Input ~ 0
 MOSI
 Text GLabel 6200 1550 0    60   Input ~ 0
@@ -154,19 +143,11 @@ Wire Wire Line
 Wire Wire Line
 	4750 2500 5000 2500
 Wire Wire Line
-	2600 1800 2600 1900
-Wire Wire Line
-	2600 1900 2600 2300
+	2600 1800 2600 2300
 Wire Wire Line
 	2600 2300 2850 2300
 Wire Wire Line
-	2150 1200 2350 1200
-Wire Wire Line
-	2350 1200 2600 1200
-Wire Wire Line
-	2600 1200 3300 1200
-Wire Wire Line
-	3300 1200 3750 1200
+	2150 1200 3750 1200
 Wire Wire Line
 	3750 1200 3750 2000
 Wire Wire Line
@@ -194,7 +175,6 @@ NoConn ~ 2850 3200
 NoConn ~ 2850 3000
 NoConn ~ 4750 2400
 NoConn ~ 4750 2300
-NoConn ~ 4750 2700
 $Comp
 L GND #PWR03
 U 1 1 558087E3
@@ -271,10 +251,10 @@ NoConn ~ 4750 3400
 NoConn ~ 4750 3500
 NoConn ~ 2850 2600
 $Comp
-L CONN_02X03 P102
+L CONN_02X03 P101
 U 1 1 5589F70E
 P 4850 1050
-F 0 "P102" H 4850 1250 50  0000 C CNN
+F 0 "P101" H 4850 1250 50  0000 C CNN
 F 1 "CONN_02X03" H 4850 850 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x03" H 4850 -150 60  0001 C CNN
 F 3 "" H 4850 -150 60  0000 C CNN
@@ -283,7 +263,7 @@ F 4 "WS6G" H 4850 1050 60  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 Text GLabel 4400 950  0    60   Input ~ 0
-MOSI
+MISO
 Text GLabel 4400 1050 0    60   Input ~ 0
 CLK
 $Comp
@@ -333,4 +313,19 @@ Reset
 Wire Wire Line
 	2750 1900 2600 1900
 Connection ~ 2600 1900
+$Comp
+L CONN_01X05 P102
+U 1 1 5575F20D
+P 6750 1650
+F 0 "P102" H 6750 1950 50  0000 C CNN
+F 1 "CONN_01X05" V 6850 1650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05" H 6750 1650 60  0001 C CNN
+F 3 "" H 6750 1650 60  0000 C CNN
+	1    6750 1650
+	1    0    0    -1  
+$EndComp
+Text GLabel 5000 2700 2    60   Input ~ 0
+MISO
+Wire Wire Line
+	4750 2700 5000 2700
 $EndSCHEMATC
