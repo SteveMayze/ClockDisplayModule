@@ -327,7 +327,9 @@ Wire Wire Line
 Wire Wire Line
 	9450 5150 9850 5150
 Wire Wire Line
-	9450 850  10150 850 
+	9450 850  9900 850 
+Wire Wire Line
+	9900 850  10150 850 
 Wire Wire Line
 	9900 950  9900 850 
 Connection ~ 9900 850 
@@ -355,15 +357,87 @@ Wire Wire Line
 Wire Wire Line
 	7250 2050 7750 2050
 Wire Wire Line
-	9450 2250 10150 2250
+	9450 2250 9850 2250
+Wire Wire Line
+	9850 2250 10150 2250
 Wire Wire Line
 	9450 950  9900 950 
 Wire Wire Line
-	9450 3750 10150 3750
+	9450 3750 9850 3750
 Wire Wire Line
-	9450 5050 10150 5050
+	9850 3750 10150 3750
+Wire Wire Line
+	9450 5050 9850 5050
+Wire Wire Line
+	9850 5050 10150 5050
 Wire Bus Line
-	7850 1000 7850 5600
+	7850 1000 7850 1100
+Wire Bus Line
+	7850 1100 7850 1200
+Wire Bus Line
+	7850 1200 7850 1300
+Wire Bus Line
+	7850 1300 7850 1400
+Wire Bus Line
+	7850 1400 7850 1500
+Wire Bus Line
+	7850 1500 7850 1550
+Wire Bus Line
+	7850 1550 7850 1600
+Wire Bus Line
+	7850 1600 7850 1650
+Wire Bus Line
+	7850 1650 7850 1750
+Wire Bus Line
+	7850 1750 7850 1850
+Wire Bus Line
+	7850 1850 7850 1950
+Wire Bus Line
+	7850 1950 7850 2050
+Wire Bus Line
+	7850 2050 7850 2150
+Wire Bus Line
+	7850 2150 7850 2200
+Wire Bus Line
+	7850 2200 7850 2300
+Wire Bus Line
+	7850 2300 7850 2400
+Wire Bus Line
+	7850 2400 7850 2500
+Wire Bus Line
+	7850 2500 7850 2600
+Wire Bus Line
+	7850 2600 7850 2700
+Wire Bus Line
+	7850 2700 7850 2800
+Wire Bus Line
+	7850 2800 7850 3700
+Wire Bus Line
+	7850 3700 7850 3800
+Wire Bus Line
+	7850 3800 7850 3900
+Wire Bus Line
+	7850 3900 7850 4000
+Wire Bus Line
+	7850 4000 7850 4100
+Wire Bus Line
+	7850 4100 7850 4200
+Wire Bus Line
+	7850 4200 7850 4300
+Wire Bus Line
+	7850 4300 7850 5000
+Wire Bus Line
+	7850 5000 7850 5100
+Wire Bus Line
+	7850 5100 7850 5200
+Wire Bus Line
+	7850 5200 7850 5300
+Wire Bus Line
+	7850 5300 7850 5400
+Wire Bus Line
+	7850 5400 7850 5500
+Wire Bus Line
+	7850 5500 7850 5600
 $Comp
 L 74HC4511 U202
 U 1 1 558719C0
@@ -534,9 +608,13 @@ $EndComp
 Wire Wire Line
 	2400 750  2700 750 
 Wire Wire Line
-	2400 1950 3000 1950
+	2400 1950 2700 1950
 Wire Wire Line
-	2400 1050 2950 1050
+	2700 1950 3000 1950
+Wire Wire Line
+	2400 1050 2700 1050
+Wire Wire Line
+	2700 1050 2950 1050
 Connection ~ 2700 1050
 Wire Wire Line
 	2400 1600 2700 1600
@@ -877,16 +955,16 @@ NoConn ~ 2350 3750
 $Comp
 L VCC #PWR015
 U 1 1 55871329
-P 1750 2500
-F 0 "#PWR015" H 1750 2350 50  0001 C CNN
-F 1 "VCC" H 1750 2650 50  0000 C CNN
-F 2 "" H 1750 2500 60  0000 C CNN
-F 3 "" H 1750 2500 60  0000 C CNN
-	1    1750 2500
+P 1750 2600
+F 0 "#PWR015" H 1750 2450 50  0001 C CNN
+F 1 "VCC" H 1750 2750 50  0000 C CNN
+F 2 "" H 1750 2600 60  0000 C CNN
+F 3 "" H 1750 2600 60  0000 C CNN
+	1    1750 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 2500 1750 2650
+	1750 2600 1750 2650
 $Comp
 L GND #PWR016
 U 1 1 5587158B
@@ -899,11 +977,15 @@ F 3 "" H 1750 4400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 4150 1750 4400
+	1750 4150 1750 4300
+Wire Wire Line
+	1750 4300 1750 4400
 Wire Wire Line
 	1150 3650 950  3650
 Wire Wire Line
-	950  3650 950  4300
+	950  3650 950  3750
+Wire Wire Line
+	950  3750 950  4300
 Wire Wire Line
 	950  4300 1750 4300
 Connection ~ 1750 4300
@@ -935,7 +1017,9 @@ F 3 "" H 1850 6350 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1850 6350 2450 6350
+	1850 6350 2200 6350
+Wire Wire Line
+	2200 6350 2450 6350
 Wire Wire Line
 	2450 6450 2200 6450
 Wire Wire Line
@@ -953,7 +1037,9 @@ F 3 "" H 3000 7150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3000 7000 3000 7150
+	3000 7000 3000 7100
+Wire Wire Line
+	3000 7100 3000 7150
 Wire Wire Line
 	2450 6550 2300 6550
 Wire Wire Line
@@ -983,38 +1069,38 @@ Seg_B
 $Comp
 L CONN_01X06 P201
 U 1 1 5589B385
-P 5000 1650
-F 0 "P201" H 5000 2000 50  0000 C CNN
-F 1 "CONN_01X06" V 5100 1650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 5000 1650 60  0001 C CNN
-F 3 "" H 5000 1650 60  0000 C CNN
-	1    5000 1650
+P 4950 1000
+F 0 "P201" H 4950 1350 50  0000 C CNN
+F 1 "CONN_01X06" V 5050 1000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 4950 1000 60  0001 C CNN
+F 3 "" H 4950 1000 60  0000 C CNN
+	1    4950 1000
 	-1   0    0    -1  
 $EndComp
-Text GLabel 5450 1400 2    60   Input ~ 0
+Text GLabel 5400 750  2    60   Input ~ 0
 D_Dig_0
-Text GLabel 5450 1500 2    60   Input ~ 0
+Text GLabel 5400 850  2    60   Input ~ 0
 D_Dig_1
-Text GLabel 5450 1600 2    60   Input ~ 0
+Text GLabel 5400 950  2    60   Input ~ 0
 D_Dig_2
-Text GLabel 5450 1700 2    60   Input ~ 0
+Text GLabel 5400 1050 2    60   Input ~ 0
 D_Dig_3
-Text GLabel 5450 1900 2    60   Input ~ 0
+Text GLabel 5400 1250 2    60   Input ~ 0
 D_Signal
-Text GLabel 5450 1800 2    60   Input ~ 0
+Text GLabel 5400 1150 2    60   Input ~ 0
 D_Colon
 Wire Wire Line
-	5200 1400 5450 1400
+	5150 750  5400 750 
 Wire Wire Line
-	5450 1500 5200 1500
+	5400 850  5150 850 
 Wire Wire Line
-	5200 1600 5450 1600
+	5150 950  5400 950 
 Wire Wire Line
-	5450 1700 5200 1700
+	5400 1050 5150 1050
 Wire Wire Line
-	5200 1800 5450 1800
+	5150 1150 5400 1150
 Wire Wire Line
-	5450 1900 5200 1900
+	5400 1250 5150 1250
 $Comp
 L CONN_01X07 P204
 U 1 1 5589E0CB
@@ -1029,38 +1115,38 @@ $EndComp
 $Comp
 L CONN_01X06 P203
 U 1 1 5589E43E
-P 6350 2750
-F 0 "P203" H 6350 3100 50  0000 C CNN
-F 1 "CONN_01X06" V 6450 2750 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 6350 2750 60  0001 C CNN
-F 3 "" H 6350 2750 60  0000 C CNN
-	1    6350 2750
+P 5800 1850
+F 0 "P203" H 5800 2200 50  0000 C CNN
+F 1 "CONN_01X06" V 5900 1850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 5800 1850 60  0001 C CNN
+F 3 "" H 5800 1850 60  0000 C CNN
+	1    5800 1850
 	1    0    0    -1  
 $EndComp
-Text GLabel 5900 2500 0    60   Input ~ 0
+Text GLabel 5350 1600 0    60   Input ~ 0
 C_Dig_0
-Text GLabel 5900 2600 0    60   Input ~ 0
+Text GLabel 5350 1700 0    60   Input ~ 0
 C_Dig_1
-Text GLabel 5900 2700 0    60   Input ~ 0
+Text GLabel 5350 1800 0    60   Input ~ 0
 C_Dig_2
-Text GLabel 5900 2800 0    60   Input ~ 0
+Text GLabel 5350 1900 0    60   Input ~ 0
 C_Dig_3
-Text GLabel 5900 2900 0    60   Input ~ 0
+Text GLabel 5350 2000 0    60   Input ~ 0
 C_Colon
-Text GLabel 5900 3000 0    60   Input ~ 0
+Text GLabel 5350 2100 0    60   Input ~ 0
 C_Signal
 Wire Wire Line
-	5900 2500 6150 2500
+	5350 1600 5600 1600
 Wire Wire Line
-	6150 2600 5900 2600
+	5600 1700 5350 1700
 Wire Wire Line
-	5900 2700 6150 2700
+	5350 1800 5600 1800
 Wire Wire Line
-	6150 2800 5900 2800
+	5600 1900 5350 1900
 Wire Wire Line
-	5900 2900 6150 2900
+	5350 2000 5600 2000
 Wire Wire Line
-	6150 3000 5900 3000
+	5600 2100 5350 2100
 $Comp
 L BC856BS Q201
 U 1 1 558A038F
