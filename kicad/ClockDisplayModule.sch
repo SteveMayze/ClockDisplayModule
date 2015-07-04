@@ -259,6 +259,7 @@ F 1 "CONN_02X03" H 4850 850 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x03" H 4850 -150 60  0001 C CNN
 F 3 "" H 4850 -150 60  0000 C CNN
 F 4 "WS6G" H 4850 1050 60  0001 C CNN "MPN"
+F 5 " 741435 - 62 " H 4850 1050 60  0001 C CNN "Conrad_PN"
 	1    4850 1050
 	1    0    0    -1  
 $EndComp
