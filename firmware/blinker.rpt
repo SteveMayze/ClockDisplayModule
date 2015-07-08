@@ -1,6 +1,6 @@
-Report       : simpleCheck
+Report       : blinker
 Date         : 07-08-2015
-Time         : 23:51:51
+Time         : 21:17:17
 
 Compiler     : BASCOM-AVR LIBRARY V 2.0.7.5,  DEMO Edition
 Processor    : M88
@@ -8,9 +8,9 @@ SRAM         : 400 hex
 EEPROM       : 200 hex
 ROMSIZE      : 2000 hex
 
-ROMIMAGE     : 594 hex  -> Will fit into ROM
-ROMIMAGE     :  1428 dec
-FLASH USED   :  17  %
+ROMIMAGE     : BE hex  -> Will fit into ROM
+ROMIMAGE     :  190 dec
+FLASH USED   :  2  %
 BAUD         : 9600 Baud
 XTAL         : 1000000 Hz
 BAUD error   : 6.99%
@@ -21,7 +21,7 @@ S-Stacksize  : 28 hex
 S-Stackstart : 4D8 hex
 Framesize    : 3C hex
 Framestart   : 474 hex
-Space left   :  872  dec
+Space left   :  883  dec
 
 LCD DB7      : PORTB.7
 LCD DB6      : PORTB.6
@@ -62,17 +62,6 @@ PWM0B                            Byte              0048          72
 PWM2A                            Byte              00B3          179 
 PWM2B                            Byte              00B4          180 
 ERR                              Bit               0006          6 
-NEW_SECOND                       Bit               0100          256 
-SLAVEADDRESS                     Byte              0101          257 
-SPI_DATA                         Byte (2)          0102          258 
-SECONDS                          Byte              0104          260 
-MINUTES                          Byte              0105          261 
-HOURS                            Byte              0106          262 
-HOUR_BCD                         Byte              0107          263 
-MINUTE_BCD                       Byte              0108          264 
-SECOND_BCD                       Byte              0109          265 
-COLON_ENABLED                    Bit               0100          256 
-TIME_DCF                         Byte              010A          266 
 
 --------------------------------------------------------------------------------
 Constant                         Value
@@ -589,32 +578,6 @@ _HWSTACK_LOW                      1239
 _SWSTACK_LOW                      1200
 _FRAME_HIGH                       1200
 _XMEGA                           0
-_SPI_SS                          &H05
-_SPI_SSP                         2
-WRITE_SLAVEADDRESS                2
-READ_SLAVEADDRESS                 3
-INTENSITY_REGISTER                10
-INTENSITY_MAX                     15
-INTENSITY_MED                     7
-INTENSITY_MIN                     0
-SHUTDOWN_REGISTER                 12
-NORMAL_MODE                       1
-DISPLAY_TEST_REGISTER             15
-DISPLAY_TEST_ON                   1
-DISPLAY_TEST_OFF                  0
-SCAN_LIMIT_ADDR                   11
-SCAN_LIMIT_VALUE                  5
-DECODE_MODE_ADDR                  9
-DECODE_MODE_VALUE                 15
-DIGIT1_ADDR                       1
-DIGIT2_ADDR                       2
-DIGIT3_ADDR                       3
-DIGIT4_ADDR                       4
-COLON_ADDR                        5
-SIGNAL_ADDR                       6
-_SDA                             4
-_SCL                             5
-___I2CDELAY                      5
 
 
 --------------------------------------------------------------------------------
