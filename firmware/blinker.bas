@@ -1,22 +1,22 @@
 
-$crystal = 1000000
-$regfile = "m88adef.dat"
-$hwstack = 40
-$swstack = 40
-$framesize = 60
+'$crystal = 10000000
+$regfile = "m8adef.dat"
+
 
 ' $baud = 4800
 
 
-Config Portb.0 = Output
+Config Portb = Output
 
+
+Portb.0 = 1
 
 Do
+
    Toggle Portb.0
 
-   Wait 1
+   Waitms 500
 
-   Loop
+Loop
 
-   End
-
+End
