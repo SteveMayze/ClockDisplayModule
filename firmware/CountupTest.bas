@@ -4,7 +4,7 @@
 
 
 $regfile = "m88pdef.dat"
-$Crystal=4000000
+$crystal = 4000000
 $hwstack=40
 $swstack=16
 $framesize=32
@@ -16,25 +16,17 @@ Config Portc = Output                                       ' Digits
 Config Portd = Output                                       ' Segments
 
 Dim Digit As Byte
+Dim Count As Byte
 
-
+Digit = 0
+Portc = Digit
 
 Do
 
-For Digit = 0 To 6
-
-   Portc = Digit
-
-   Portd = 3                                                ' Segement A and B ON
-
-   Waitms 500
-
-   Portd = 0
-                                                  ' All segments OFF
-   Waitms 500
-
-Next
-
+   For Count = 0 To 9
+      Portd = Count                                         ' Segement A and B ON
+      Waitms 500
+   Next
 
 Loop
 

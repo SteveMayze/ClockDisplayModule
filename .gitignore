@@ -7,3 +7,10 @@
 *.swp
 *.zip
 **/*-cache.lib
+*.hex
+*.obj
+*.rpt
+*.BM
+*.bin
+*.dbg
+
