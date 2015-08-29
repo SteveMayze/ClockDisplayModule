@@ -238,19 +238,17 @@ Text GLabel 10150 5050 2    60   Input ~ 0
 D_Dig_3
 Entry Wire Line
 	7750 1450 7850 1550
-Text Label 7350 1450 0    60   ~ 0
-Seg_A
-Text Label 7350 1550 0    60   ~ 0
-Seg_B
 Text Label 7350 1650 0    60   ~ 0
-Seg_C
+Seg_A
 Text Label 7350 1750 0    60   ~ 0
-Seg_D
+Seg_B
 Text Label 7350 1850 0    60   ~ 0
-Seg_E
+Seg_C
 Text Label 7350 1950 0    60   ~ 0
-Seg_F
+Seg_D
 Text Label 7350 2050 0    60   ~ 0
+Seg_E
+Text Label 7350 1550 0    60   ~ 0
 Seg_G
 Entry Wire Line
 	7750 1550 7850 1650
@@ -340,8 +338,6 @@ Connection ~ 9850 3750
 Wire Wire Line
 	9850 5150 9850 5050
 Connection ~ 9850 5050
-Wire Wire Line
-	7250 1450 7750 1450
 Wire Wire Line
 	7250 1550 7750 1550
 Wire Wire Line
@@ -1197,4 +1193,8 @@ Wire Wire Line
 	4900 6150 4900 6350
 Wire Wire Line
 	4900 6350 5500 6350
+Wire Wire Line
+	7250 1450 7750 1450
+Text Label 7350 1450 0    60   ~ 0
+Seg_F
 $EndSCHEMATC
