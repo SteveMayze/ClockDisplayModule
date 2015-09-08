@@ -18,18 +18,17 @@ Config Portd = Output                                       ' Segments
 Dim Digit As Byte
 Dim Count As Byte
 
+Portd = Makebcd(8)
 
 Do
 
    For Digit = 0 To 5
      ' For Count = 0 To 5
-         Portd = Digit
          Portc = Digit
-         Waitms 100
+         Waitms 1
      ' Next                                                  ' count
    Next                                                     ' digit
 
 Loop
-
 
 End
