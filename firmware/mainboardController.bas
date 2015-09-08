@@ -82,6 +82,9 @@ Const Display_test_register = &H0F
 Const Display_test_on = &H01
 Const Display_test_off = &H00
 
+Const Display_blink_register = &H0D
+' Const Colon_blink = &H10
+Const Display_indicators_register = &H06
 
 ' Scan Lmit 0xXB
 Const Scan_limit_addr = &H0B
@@ -208,25 +211,17 @@ Init_display:
    Spi_data(2) = Display_test_off
    Spiout Spi_data(1) , 2
 
-   Spi_data(1) = Intensity_register
-   Spi_data(2) = Intensity_max
+
+   Spi_data(1) = Display_blink_register
+   Spi_data(2) = &B00010000
    Spiout Spi_data(1) , 2
 
-   Spi_data(1) = Scan_limit_addr
-   Spi_data(2) = Scan_limit_value
+   Spi_data(1) = Display_indicators_register
+   Spi_data(2) = &H0A
    Spiout Spi_data(1) , 2
 
-   Spi_data(1) = Decode_mode_addr
-   Spi_data(2) = Decode_mode_value
-   Spiout Spi_data(1) , 2
 
-   Spi_data(1) = Signal_addr
-   Spi_data(2) = 0
-   Spiout Spi_data(1) , 2
 
-   Spi_data(1) = Colon_addr
-   Spi_data(2) = 0
-   Spiout Spi_data(1) , 2
 
 Return
 

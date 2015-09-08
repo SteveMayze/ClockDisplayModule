@@ -46,12 +46,12 @@
 '                                    enabled for blocking, or not.
 '
 '                                    0x00 - No blink
-'                                    0x02 - Digit 1
-'                                    0x04 - Digit 2
-'                                    0x08 - Digit 3
-'                                    0x10 - Digit 4
-'                                    0x11 - Colon
-'                                    0x12 - Indicators
+'                                    0x01 - Digit 1
+'                                    0x02 - Digit 2
+'                                    0x04 - Digit 3
+'                                    0x08 - Digit 4
+'                                    0x10 - Colon
+'                                    0x20 - Indicators
 '                                    0x1F - All
 '
 ' 0x0E             Blink Rate*       Controls the blink rate of the digit
@@ -86,7 +86,7 @@ On Timer1 Tenthsecondtimer_isr
 Const Timer1_tenthsecondcount = 63973                       ' 65535 - 1563
 
 Dim Rbit As Bit
-Config Pinb.6 = Output                                      ' MISO
+Config Pinb.4 = Output                                      ' MISO
 Config Spi = Hard , Interrupt = On , Data Order = Msb , Master = No , Polarity = Low , Phase = 0 , Clockrate = 128
 Spiinit
 
@@ -111,6 +111,9 @@ Dim Value As Byte
 
 
 Dim Digits(6) As Byte
+Dim Blink_flag As Bit
+Dim Blink_mask As Byte
+Dim Blink_test As Byte
 
 Dim Tenthcount As Byte
 
@@ -127,26 +130,30 @@ Const Colon = &H05                                          ' &H00 = diabled, &H
 Const Indicators = &H06                                     ' &H00 = All OFF, &H01 = Top, &H02 = Bottom, &H03 = Top and bottom
 Const Intensity = &H0A                                      ' Not implemented
 Const Power_mode = &H0C                                     ' &H00 = display disabled, &H01 display enabled
-Const Digit_blink = &H0D                                    ' &H00 = none, &H02 = Digit 1, &H04 = Digit 2, &H08 = Digit 3, &H10 = Digit 4, &H20 = colon, &H40 = indicators, &H7F = ALL
+Const Digit_blink = &H0D                                    ' &H00 = none, &H01 = Digit 1, &H02 = Digit 2, &H04 = Digit 3, &H08 = Digit 4, &H10 = colon, &H20 = indicators, &H7F = ALL
 Const Blink_rate = &H0E                                     ' Not implemented
 Const Test_mode = &H0F                                      ' &H00 = disabled, &H01 = all segements on, &H02 = sequence run*,
 
 Const Disabled = 0
 Const Enabled = 1
 
+Const Colon_on = &H00
+Const Colon_off = &H06
+
+Const Digit_off = &H0A
 
 
 Spdr = 0                                                    ' start with sending 0 the first time
 Register(test_mode) = Disabled
 Register(power_mode) = Enabled
-Register(digit_blink) = Enabled
+Register(digit_blink) = &H7F
 
 Digits(1) = 1
 Digits(2) = 2
 Digits(3) = 3
 Digits(4) = 4
-Digits(5) = 5
-Digits(6) = 6
+Digits(5) = 5                                               ' Colon position
+Digits(6) = 6                                               ' indicator position
 
 Position = 5
 
@@ -173,8 +180,7 @@ Do
          ' Case Intensity:
          ' Case Power_mode:
          Case Digit_blink:
-            If(register(idx) = 1 Then
-            End If
+             Blink_mask = Register(idx)
          ' Case Blink_rate:
          Case Test_mode:
             If Register(idx) = Enabled Then
@@ -211,11 +217,17 @@ Renderdisplay_isr:                                          '50 Hz
 
    Digit = Position + 1
    Portc = Makebcd(position)
-   If Register(power_mode) > 0 Then
-      Value = Digits(digit)
+
+
+   Blink_test = &B00000001
+   Shift Blink_test , Left , Position
+   Blink_test = Blink_test And Blink_mask
+   If blink_flag = 1 and blink_test > 0 Then
+      Value = Digit_off
    Else
-      Value = 0
+      Value = Digits(digit)
    End If
+
    Portd = Value
 
 Return
@@ -227,7 +239,7 @@ Tenthsecondtimer_isr:
 
    Incr Tenthcount
    If Tenthcount = 5 Or Tenthcount = 10 Then                ' 0.5 Second
-
+       Toggle Blink_flag
    End If
 
    If Tenthcount > 9 Then                                   ' One Second
