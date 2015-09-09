@@ -216,13 +216,14 @@ Renderdisplay_isr:                                          '50 Hz
    End If
 
    Digit = Position + 1
+   Portd = &H0A                                             ' Swtich off the segments
    Portc = Makebcd(position)
 
 
    Blink_test = &B00000001
    Shift Blink_test , Left , Position
    Blink_test = Blink_test And Blink_mask
-   If blink_flag = 1 and blink_test > 0 Then
+   If Blink_flag = 1 And Blink_test > 0 Then
       Value = Digit_off
    Else
       Value = Digits(digit)
