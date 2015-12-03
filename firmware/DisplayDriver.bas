@@ -21,7 +21,7 @@
 ' 0x05             Colon             The colon (between the hours and minutes)
 '
 '                                    0x00 - Colon OFF
-'                                    0x00 - Colon ON
+'                                    0x01 - Colon ON
 '
 ' 0x06             Indicators        The indicator lamps that are featured on
 '                                    the display
@@ -115,6 +115,8 @@ Dim Blink_flag As Bit
 Dim Blink_mask As Byte
 Dim Blink_test As Byte
 
+Dim Power_flag As Bit
+
 Dim Tenthcount As Byte
 
 Dim Spi_d As Byte
@@ -159,6 +161,7 @@ Position = 5
 
 Spdr = 0
 Reset Spi_idx
+Reset Power_flag
 Do
    If Rbit = 1 Then
       Reset Rbit
@@ -174,11 +177,42 @@ Do
          Case Minutes_unit:
             Digits(4) = Register(idx)
          Case Colon:
-            Digits(5) = Register(idx)
+         ' This can not be the simple digit. This needs
+         ' to be interpreted 00 = off i.e. 0A etc etc.
+         If Register(idx) = 0 Then
+            Digits(5) = &H0A
+         Else
+            Digits(5) = 0
+         End If
          Case Indicators:
+         ' This can not be the simple digit. This needs
+         ' to be interpreted 00 = off i.e. 0A etc etc.
             Digits(6) = Register(idx)
+            Select Case Register(idx)
+               Case 00:
+                  Digits(6) = &H0A                          ' OFF
+               Case 01:
+                  Digits(6) = 5                             ' Top
+               Case 02:
+                  Digits(6) = 1                             ' Bottom
+               Case 03
+                  Digits(6) = 0                             ' All
+               Case Else
+            End Select
+
          ' Case Intensity:
-         ' Case Power_mode:
+         Case Power_mode:
+            If Register(idx) = 0 Then
+               Digits(1) = &H0A
+               Digits(2) = &H0A
+               Digits(3) = &H0A
+               Digits(4) = &H0A
+               Digits(5) = &H0A
+               Digits(6) = &H0A
+               Reset Power_flag
+            Else
+               Set Power_flag
+            End If
          Case Digit_blink:
              Blink_mask = Register(idx)
          ' Case Blink_rate:
@@ -227,6 +261,10 @@ Renderdisplay_isr:                                          '50 Hz
       Value = Digit_off
    Else
       Value = Digits(digit)
+   End If
+
+   If Power_flag = 0 Then
+      Value = &H0A
    End If
 
    Portd = Value
