@@ -73,7 +73,7 @@
     (visible_elements FFFEFF7F)
     (pcbplotparams
       (layerselection 0x010fc_80000001)
-      (usegerberextensions true)
+      (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
       (plotframeref false)
