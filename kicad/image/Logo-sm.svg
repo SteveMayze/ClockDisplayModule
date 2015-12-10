@@ -14,7 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="Logo-sm.svg">
+   sodipodi:docname="Logo-sm.svg"
+   inkscape:export-filename="D:\pcbs\LogoTest\logo1.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -22,11 +25,11 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.9999999"
-     inkscape:cx="169.82393"
-     inkscape:cy="25.502327"
+     inkscape:zoom="22.627417"
+     inkscape:cx="202.64232"
+     inkscape:cy="23.780919"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -91,7 +94,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1983,9 +1986,10 @@
     <g
        id="g4824"
        transform="translate(0.50780796,0)"
-       inkscape:export-filename="/home/steve/pcbs/ClockDisplayModule/kicad/image/MyLogo_basic_rounded.png"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo2.png"
        inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300">
+       inkscape:export-ydpi="300"
+       style="stroke:#000000;fill:none">
       <path
          sodipodi:type="arc"
          style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -2745,18 +2749,27 @@
        d="m 207.89412,1036.7363 a 3.0640492,3.0640492 0 0 1 -2.80617,-1.4668 3.0640492,3.0640492 0 0 1 -0.0101,-3.1663 3.0640492,3.0640492 0 0 1 2.79675,-1.4846"
        sodipodi:start="1.509435"
        sodipodi:end="4.7673671"
-       sodipodi:open="true" />
+       sodipodi:open="true"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 207.88892,1030.6139 1.83403,0 3.18027,0"
        id="path3328"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        inkscape:connector-curvature="0"
        id="path3330"
        d="m 207.88892,1036.7372 1.83403,0 0,0"
-       style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        sodipodi:open="true"
        sodipodi:end="4.7673671"
@@ -2769,18 +2782,27 @@
        sodipodi:cx="-209.88783"
        id="path3332"
        style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="arc" />
+       sodipodi:type="arc"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        inkscape:connector-curvature="0"
        id="path3334"
        d="m 209.70515,1033.7034 -1.83403,0 0,0"
-       style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 209.79853,1039.8299 -5.18556,0.011 0,0"
        id="path3336"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        sodipodi:open="true"
        sodipodi:end="4.7446511"
@@ -2793,13 +2815,19 @@
        sodipodi:cx="-212.85271"
        id="path3338"
        style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="arc" />
+       sodipodi:type="arc"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3340"
        d="m 215.9198,1033.7749 0,1.6287 0,1.4222"
-       style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        sodipodi:open="true"
        sodipodi:end="4.7446511"
@@ -2812,19 +2840,28 @@
        sodipodi:cx="1033.7034"
        id="path3342"
        style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:type="arc" />
+       sodipodi:type="arc"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.76784408;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 220.5084,1033.7749 0,1.6287 0,4.4246"
        id="path3344"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <path
        sodipodi:nodetypes="szsszssss"
        inkscape:connector-curvature="0"
        id="path3346"
        d="m 202.61077,1028.8681 c 11.24441,-2.4573 20.14809,-0.088 20.33852,0 0.19044,0.088 0.68723,0.26 0.68723,0.5827 l 0,11.9027 c 0,0.3228 -0.42216,0.5298 -0.68723,0.5826 -0.26507,0.053 -10.93651,2.2361 -20.33115,0 -0.18332,-0.044 -0.68723,-0.2598 -0.68723,-0.5826 l 0,-11.9027 c 0,-0.3227 0.49546,-0.5424 0.67986,-0.5827 z"
-       style="fill:none;stroke:#000000;stroke-width:1.32588303;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:1.32588303;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <g
        id="g4529"
        inkscape:export-xdpi="300"
@@ -2921,5 +2958,27 @@
          d="m 202.36077,1050.4931 c 11.24441,-2.4573 20.14809,-0.088 20.33852,0 0.19044,0.088 0.68723,0.26 0.68723,0.5827 l 0,11.9027 c 0,0.3228 -0.42216,0.5298 -0.68723,0.5826 -0.26507,0.053 -10.93651,2.2361 -20.33115,0 -0.18332,-0.044 -0.68723,-0.2598 -0.68723,-0.5826 l 0,-11.9027 c 0,-0.3227 0.49546,-0.5424 0.67986,-0.5827 z"
          style="fill:none;stroke:#000000;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
+    <rect
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4498"
+       width="56.745319"
+       height="38.360542"
+       x="129.20975"
+       y="1015.074"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5057"
+       width="28.814602"
+       height="22.273865"
+       x="198.32944"
+       y="1023.9129"
+       inkscape:export-filename="D:\pcbs\LogoTest\logo3.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
   </g>
 </svg>

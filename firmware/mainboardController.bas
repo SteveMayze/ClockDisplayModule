@@ -30,8 +30,9 @@ $baud = 4800
 
 Config Sda = Portc.4
 Config Scl = Portc.5
-
 Config Spi = Hard , Interrupt = Off , Data Order = Msb , Master = Yes , Polarity = Low , Phase = 0 , Clockrate = 128
+
+
 Spiinit
 
 ' Timer and interrupt Configuration ==========================================
