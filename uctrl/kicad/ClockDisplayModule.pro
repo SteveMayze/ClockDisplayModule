@@ -1,11 +1,9 @@
-update=Wed 15 Jul 2015 20:54:30 CEST
+update=Sat 12 Dec 2015 09:14:08 PM CET
 version=1
 last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
@@ -70,3 +68,5 @@ NetFmtName=
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
+[general]
+version=1
