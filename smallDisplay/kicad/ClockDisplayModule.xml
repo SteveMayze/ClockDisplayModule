@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/steve/pcbs/ClockDisplayModule/kicad/ClockDisplayModule.sch</source>
+    <date>Sat 04 Jul 2015 16:35:39 CEST</date>
+    <tool>Eeschema 0.201507012246+5852~23~ubuntu14.04.1-product</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ClockDisplayModule.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="AFF101">
+      <value>NKR161B</value>
+      <footprint>ClockFootprints:161_163_Series</footprint>
+      <fields>
+        <field name="MPN">NKR161B</field>
+        <field name="ConradPN">N/A</field>
+        <field name="Label">Value</field>
+        <field name="Link">http://www.digikey.de/product-search/en?pv311=29&amp;FV=fff40008%2Cfff80024%2C940001%2C980009%2C10c0001%2C3440002%2C4dc0005%2C4dc001d%2C4dc0043%2C4dc0044%2C4dc005c%2C4dc0068%2C4dc006a%2C4dc0073%2C4dc007d%2C4dc0080%2C4dc008a&amp;k=LED&amp;mnonly=0&amp;newproducts=0&amp;ColumnSort=0&amp;page=1&amp;stock=1&amp;quantity=0&amp;ptm=0&amp;fid=0&amp;pageSize=100</field>
+      </fields>
+      <libsource lib="clockModuleSymbols" part="7SEGMENTS-CC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55743C22</tstamp>
+    </comp>
+    <comp ref="AFF102">
+      <value>NKR161B</value>
+      <footprint>ClockFootprints:161_163_Series</footprint>
+      <fields>
+        <field name="MPN">NKR161B</field>
+        <field name="ConradPN">N/A</field>
+        <field name="Label">Value</field>
+        <field name="Link">http://www.digikey.de/product-search/en?pv311=29&amp;FV=fff40008%2Cfff80024%2C940001%2C980009%2C10c0001%2C3440002%2C4dc0005%2C4dc001d%2C4dc0043%2C4dc0044%2C4dc005c%2C4dc0068%2C4dc006a%2C4dc0073%2C4dc007d%2C4dc0080%2C4dc008a&amp;k=LED&amp;mnonly=0&amp;newproducts=0&amp;ColumnSort=0&amp;page=1&amp;stock=1&amp;quantity=0&amp;ptm=0&amp;fid=0&amp;pageSize=100</field>
+      </fields>
+      <libsource lib="clockModuleSymbols" part="7SEGMENTS-CC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55743C76</tstamp>
+    </comp>
+    <comp ref="AFF103">
+      <value>NKR161B</value>
+      <footprint>ClockFootprints:161_163_Series</footprint>
+      <fields>
+        <field name="MPN">NKR161B</field>
+        <field name="ConradPN">N/A</field>
+        <field name="Label">Value</field>
+        <field name="Link">http://www.digikey.de/product-search/en?pv311=29&amp;FV=fff40008%2Cfff80024%2C940001%2C980009%2C10c0001%2C3440002%2C4dc0005%2C4dc001d%2C4dc0043%2C4dc0044%2C4dc005c%2C4dc0068%2C4dc006a%2C4dc0073%2C4dc007d%2C4dc0080%2C4dc008a&amp;k=LED&amp;mnonly=0&amp;newproducts=0&amp;ColumnSort=0&amp;page=1&amp;stock=1&amp;quantity=0&amp;ptm=0&amp;fid=0&amp;pageSize=100</field>
+      </fields>
+      <libsource lib="clockModuleSymbols" part="7SEGMENTS-CC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55743CA2</tstamp>
+    </comp>
+    <comp ref="AFF104">
+      <value>NKR161B</value>
+      <footprint>ClockFootprints:161_163_Series</footprint>
+      <fields>
+        <field name="MPN">NKR161B</field>
+        <field name="ConradPN">N/A</field>
+        <field name="Label">Value</field>
+        <field name="Link">http://www.digikey.de/product-search/en?pv311=29&amp;FV=fff40008%2Cfff80024%2C940001%2C980009%2C10c0001%2C3440002%2C4dc0005%2C4dc001d%2C4dc0043%2C4dc0044%2C4dc005c%2C4dc0068%2C4dc006a%2C4dc0073%2C4dc007d%2C4dc0080%2C4dc008a&amp;k=LED&amp;mnonly=0&amp;newproducts=0&amp;ColumnSort=0&amp;page=1&amp;stock=1&amp;quantity=0&amp;ptm=0&amp;fid=0&amp;pageSize=100</field>
+      </fields>
+      <libsource lib="clockModuleSymbols" part="7SEGMENTS-CC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55743CD4</tstamp>
+    </comp>
+    <comp ref="U101">
+      <value>MAX7221</value>
+      <footprint>ClockFootprints:SOIC-24</footprint>
+      <datasheet>http://www.produktinfo.conrad.com/datenblaetter/150000-174999/170137-da-01-en-IC_MAX7221EWG_SOL24L.pdf</datasheet>
+      <fields>
+        <field name="MPN">MAX7221</field>
+        <field name="ConradPN">170137 - 62</field>
+        <field name="Label">Value</field>
+        <field name="Link">http://www.conrad.de/ce/de/product/170137/Linear-IC-Maxim-Integrated-MAX7221EWG-Gehaeuseart-SO-24L-Ausfuehrung-8-Digit-LED-Display-Driver?ref=searchDetail</field>
+      </fields>
+      <libsource lib="clockModuleSymbols" part="MAX7221"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5575B838</tstamp>
+    </comp>
+    <comp ref="R101">
+      <value>25K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5575BA42</tstamp>
+    </comp>
+    <comp ref="C102">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5575BAA8</tstamp>
+    </comp>
+    <comp ref="D101">
+      <value>Colon1</value>
+      <footprint>LEDs:LED-0805</footprint>
+      <fields>
+        <field name="MPN">Value</field>
+        <field name="ConradPN">Value</field>
+      </fields>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5575E769</tstamp>
+    </comp>
+    <comp ref="D102">
+      <value>Colon2</value>
+      <footprint>LEDs:LED-0805</footprint>
+      <fields>
+        <field name="MPN">Value</field>
+        <field name="ConradPN">Value</field>
+      </fields>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5575E7AF</tstamp>
+    </comp>
+    <comp ref="D103">
+      <value>Alarm</value>
+      <footprint>LEDs:LED-0805</footprint>
+      <fields>
+        <field name="MPN">Value</field>
+        <field name="ConradPN">Value</field>
+      </fields>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5575E7D7</tstamp>
+    </comp>
+    <comp ref="D104">
+      <value>Auto</value>
+      <footprint>LEDs:LED-0805</footprint>
+      <fields>
+        <field name="MPN">Value</field>
+        <field name="ConradPN">Value</field>
+      </fields>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5575E804</tstamp>
+    </comp>
+    <comp ref="P101">
+      <value>CONN_01X05</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x05</footprint>
+      <libsource lib="conn" part="CONN_01X05"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5575F20D</tstamp>
+    </comp>
+    <comp ref="C101">
+      <value>10u</value>
+      <footprint>Capacitors_SMD:c_elec_4x5.8</footprint>
+      <datasheet>http://industrial.panasonic.com/lecs/www-data/pdf/ABA0000/ABA0000CE120.pdf</datasheet>
+      <fields>
+        <field name="MPN">EEE-FK1C100R</field>
+        <field name="ConradPN">443516 - 62</field>
+        <field name="Label">Value</field>
+        <field name="Link">http://www.digikey.com/product-detail/en/EEE-FK1C100R/PCE3782CT-ND/766158</field>
+      </fields>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5575DF02</tstamp>
+    </comp>
+    <comp ref="R102">
+      <value>0</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5577CF25</tstamp>
+    </comp>
+    <comp ref="R103">
+      <value>0</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5577D03D</tstamp>
+    </comp>
+    <comp ref="R104">
+      <value>0</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5577D071</tstamp>
+    </comp>
+    <comp ref="R105">
+      <value>0</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5577D0AB</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="device" part="LED">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="clockModuleSymbols" part="7SEGMENTS-CC">
+      <fields>
+        <field name="Reference">AFF</field>
+        <field name="Value">7SEGMENTS-CC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="e" type="input"/>
+        <pin num="2" name="d" type="input"/>
+        <pin num="3" name="C.C." type="input"/>
+        <pin num="4" name="c" type="input"/>
+        <pin num="5" name="DP" type="input"/>
+        <pin num="6" name="b" type="input"/>
+        <pin num="7" name="a" type="input"/>
+        <pin num="8" name="C.C." type="input"/>
+        <pin num="9" name="f" type="input"/>
+        <pin num="10" name="g" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="clockModuleSymbols" part="MAX7221">
+      <description>Serially Interfaced, 8-Digit LED Display Drivers</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX7221</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DIN" type="input"/>
+        <pin num="2" name="Dig_0" type="input"/>
+        <pin num="3" name="Dig_4" type="input"/>
+        <pin num="4" name="GND" type="power_out"/>
+        <pin num="5" name="Dig_6" type="input"/>
+        <pin num="6" name="Dig_2" type="input"/>
+        <pin num="7" name="Dig_3" type="input"/>
+        <pin num="8" name="Dig_7" type="input"/>
+        <pin num="9" name="GND" type="power_out"/>
+        <pin num="10" name="Dig_5" type="input"/>
+        <pin num="11" name="Dig_1" type="input"/>
+        <pin num="12" name="LOAD_(~CS)" type="input"/>
+        <pin num="13" name="CLK" type="input"/>
+        <pin num="14" name="SEG_A" type="output"/>
+        <pin num="15" name="SEG_F" type="output"/>
+        <pin num="16" name="SEG_B" type="output"/>
+        <pin num="17" name="SEG_G" type="output"/>
+        <pin num="18" name="Iset" type="input"/>
+        <pin num="19" name="V+" type="input"/>
+        <pin num="20" name="SEG_C" type="output"/>
+        <pin num="21" name="SEG_E" type="output"/>
+        <pin num="22" name="SEG_DP" type="output"/>
+        <pin num="23" name="SEG_D" type="output"/>
+        <pin num="24" name="Dout" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X05">
+      <footprints>
+        <fp>Pin_Header_Straight_1X05</fp>
+        <fp>Pin_Header_Angled_1X05</fp>
+        <fp>Socket_Strip_Straight_1X05</fp>
+        <fp>Socket_Strip_Angled_1X05</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X05</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="CP">
+      <description>Polarised capacitor</description>
+      <footprints>
+        <fp>CP*</fp>
+        <fp>Elko*</fp>
+        <fp>TantalC*</fp>
+        <fp>C*elec</fp>
+        <fp>c_elec*</fp>
+        <fp>SMD*_Pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="clockModuleSymbols">
+      <uri>/home/steve/pcbs/ClockDisplayModule/kicad/lib/clockModuleSymbols.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Seg_B">
+      <node ref="AFF103" pin="6"/>
+      <node ref="U101" pin="16"/>
+      <node ref="AFF104" pin="6"/>
+      <node ref="R103" pin="2"/>
+      <node ref="AFF101" pin="6"/>
+      <node ref="AFF102" pin="6"/>
+      <node ref="R105" pin="2"/>
+    </net>
+    <net code="2" name="Seg_A">
+      <node ref="AFF102" pin="7"/>
+      <node ref="U101" pin="14"/>
+      <node ref="AFF104" pin="7"/>
+      <node ref="R102" pin="2"/>
+      <node ref="AFF101" pin="7"/>
+      <node ref="AFF103" pin="7"/>
+      <node ref="R104" pin="2"/>
+    </net>
+    <net code="3" name="Net-(D104-Pad2)">
+      <node ref="D104" pin="2"/>
+      <node ref="R105" pin="1"/>
+    </net>
+    <net code="4" name="Net-(D103-Pad2)">
+      <node ref="R104" pin="1"/>
+      <node ref="D103" pin="2"/>
+    </net>
+    <net code="5" name="Net-(U101-Pad22)">
+      <node ref="U101" pin="22"/>
+    </net>
+    <net code="6" name="Seg_G">
+      <node ref="AFF104" pin="10"/>
+      <node ref="U101" pin="17"/>
+      <node ref="AFF103" pin="10"/>
+      <node ref="AFF101" pin="10"/>
+      <node ref="AFF102" pin="10"/>
+    </net>
+    <net code="7" name="Seg_F">
+      <node ref="AFF104" pin="9"/>
+      <node ref="U101" pin="15"/>
+      <node ref="AFF102" pin="9"/>
+      <node ref="AFF103" pin="9"/>
+      <node ref="AFF101" pin="9"/>
+    </net>
+    <net code="8" name="Seg_E">
+      <node ref="AFF103" pin="1"/>
+      <node ref="AFF104" pin="1"/>
+      <node ref="AFF101" pin="1"/>
+      <node ref="AFF102" pin="1"/>
+      <node ref="U101" pin="21"/>
+    </net>
+    <net code="9" name="Seg_D">
+      <node ref="U101" pin="23"/>
+      <node ref="AFF101" pin="2"/>
+      <node ref="AFF102" pin="2"/>
+      <node ref="AFF104" pin="2"/>
+      <node ref="AFF103" pin="2"/>
+    </net>
+    <net code="10" name="Net-(D102-Pad2)">
+      <node ref="D102" pin="2"/>
+      <node ref="R103" pin="1"/>
+    </net>
+    <net code="11" name="Net-(D101-Pad2)">
+      <node ref="R102" pin="1"/>
+      <node ref="D101" pin="2"/>
+    </net>
+    <net code="12" name="MOSI">
+      <node ref="U101" pin="1"/>
+      <node ref="P101" pin="1"/>
+    </net>
+    <net code="13" name="GND">
+      <node ref="C101" pin="2"/>
+      <node ref="C102" pin="2"/>
+      <node ref="U101" pin="4"/>
+      <node ref="U101" pin="9"/>
+      <node ref="P101" pin="5"/>
+    </net>
+    <net code="14" name="V+">
+      <node ref="U101" pin="19"/>
+      <node ref="C101" pin="1"/>
+      <node ref="C102" pin="1"/>
+      <node ref="R101" pin="1"/>
+      <node ref="P101" pin="4"/>
+    </net>
+    <net code="15" name="CLK">
+      <node ref="P101" pin="3"/>
+      <node ref="U101" pin="13"/>
+    </net>
+    <net code="16" name="~SS">
+      <node ref="U101" pin="12"/>
+      <node ref="P101" pin="2"/>
+    </net>
+    <net code="17" name="Dig_1">
+      <node ref="U101" pin="11"/>
+      <node ref="AFF102" pin="3"/>
+      <node ref="AFF102" pin="8"/>
+    </net>
+    <net code="18" name="Dig_0">
+      <node ref="AFF101" pin="3"/>
+      <node ref="U101" pin="2"/>
+      <node ref="AFF101" pin="8"/>
+    </net>
+    <net code="19" name="Signal">
+      <node ref="D103" pin="1"/>
+      <node ref="U101" pin="10"/>
+      <node ref="D104" pin="1"/>
+    </net>
+    <net code="20" name="Colon">
+      <node ref="U101" pin="3"/>
+      <node ref="D101" pin="1"/>
+      <node ref="D102" pin="1"/>
+    </net>
+    <net code="21" name="Net-(R101-Pad2)">
+      <node ref="U101" pin="18"/>
+      <node ref="R101" pin="2"/>
+    </net>
+    <net code="22" name="Seg_C">
+      <node ref="U101" pin="20"/>
+      <node ref="AFF101" pin="4"/>
+      <node ref="AFF102" pin="4"/>
+      <node ref="AFF104" pin="4"/>
+      <node ref="AFF103" pin="4"/>
+    </net>
+    <net code="23" name="Net-(U101-Pad8)">
+      <node ref="U101" pin="8"/>
+    </net>
+    <net code="24" name="Net-(U101-Pad5)">
+      <node ref="U101" pin="5"/>
+    </net>
+    <net code="25" name="Net-(U101-Pad24)">
+      <node ref="U101" pin="24"/>
+    </net>
+    <net code="26" name="Net-(AFF102-Pad5)">
+      <node ref="AFF102" pin="5"/>
+    </net>
+    <net code="27" name="Net-(AFF101-Pad5)">
+      <node ref="AFF101" pin="5"/>
+    </net>
+    <net code="28" name="Net-(AFF104-Pad5)">
+      <node ref="AFF104" pin="5"/>
+    </net>
+    <net code="29" name="Net-(AFF103-Pad5)">
+      <node ref="AFF103" pin="5"/>
+    </net>
+    <net code="30" name="Dig_3">
+      <node ref="AFF104" pin="3"/>
+      <node ref="AFF104" pin="8"/>
+      <node ref="U101" pin="7"/>
+    </net>
+    <net code="31" name="Dig_2">
+      <node ref="AFF103" pin="8"/>
+      <node ref="AFF103" pin="3"/>
+      <node ref="U101" pin="6"/>
+    </net>
+  </nets>
+</export>
