@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name ClockFootprints)(type KiCad)(uri "$(KIPRJMOD)/lib/ClockFootprints.pretty")(options "")(descr ""))
-)
