@@ -1,19 +1,36 @@
 Report       : blinker
+<<<<<<< HEAD
 Date         : 07-08-2015
 Time         : 21:17:17
 
 Compiler     : BASCOM-AVR LIBRARY V 2.0.7.5,  DEMO Edition
 Processor    : M88
+=======
+Date         : 08-23-2015
+Time         : 11:19:39
+
+Compiler     : BASCOM-AVR LIBRARY V 2.0.7.5,  DEMO Edition
+Processor    : M88P
+>>>>>>> UCtrl_small
 SRAM         : 400 hex
 EEPROM       : 200 hex
 ROMSIZE      : 2000 hex
 
+<<<<<<< HEAD
 ROMIMAGE     : BE hex  -> Will fit into ROM
 ROMIMAGE     :  190 dec
 FLASH USED   :  2  %
 BAUD         : 9600 Baud
 XTAL         : 1000000 Hz
 BAUD error   : 6.99%
+=======
+ROMIMAGE     : C6 hex  -> Will fit into ROM
+ROMIMAGE     :  198 dec
+FLASH USED   :  2  %
+BAUD         : 9600 Baud
+XTAL         : 4000000 Hz
+BAUD error   : 0.16%
+>>>>>>> UCtrl_small
 
 Stack start  : 4FF hex
 Stack size   : 28 hex
@@ -34,6 +51,11 @@ LCD mode     :  4  bit
 --------------------------------------------------------------------------------
 Variable                         Type            Address(hex)   Address(dec)
 --------------------------------------------------------------------------------
+<<<<<<< HEAD
+=======
+UBRR0                            Word              00C4          196 
+UBRR                             Word              00C4          196 
+>>>>>>> UCtrl_small
 OCR1B                            Word              008A          138 
 OCR1A                            Word              0088          136 
 ICR1                             Word              0086          134 
@@ -554,13 +576,21 @@ _RTSCTS                          0
 _RTSCTS1                         0
 _RTSCTS3                         0
 _RTSCTS4                         0
+<<<<<<< HEAD
 _CHIP                            33
+=======
+_CHIP                            62
+>>>>>>> UCtrl_small
 _RAMSIZE                         1024
 _ERAMSIZE                        512
 _SIM                             0
 _HUGE                            0
 _BASE                            1
+<<<<<<< HEAD
 _XTAL                            1000000
+=======
+_XTAL                            4000000
+>>>>>>> UCtrl_small
 _BUILD                           20750
 _COMPILER                        90
 _HWMUL                           1
@@ -583,6 +613,11 @@ _XMEGA                           0
 --------------------------------------------------------------------------------
 Warnings:
 --------------------------------------------------------------------------------
+<<<<<<< HEAD
+=======
+UBRR0                            not used
+UBRR                             not used
+>>>>>>> UCtrl_small
 OCR1B                            not used
 OCR1A                            not used
 ICR1                             not used

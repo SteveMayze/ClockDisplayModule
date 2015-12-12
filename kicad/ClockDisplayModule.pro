@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 update=Sat 04 Jul 2015 16:40:59 CEST
+=======
+update=Wed 15 Jul 2015 20:54:30 CEST
+>>>>>>> UCtrl_small
 version=1
 last_client=kicad
 [cvpcb]
