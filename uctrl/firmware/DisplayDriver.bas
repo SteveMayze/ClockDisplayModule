@@ -87,7 +87,7 @@ Const Timer1_tenthsecondcount = 63973                       ' 65535 - 1563
 
 Dim Rbit As Bit
 Config Pinb.4 = Output                                      ' MISO
-Config Spi = Hard , Interrupt = On , Data Order = Msb , Master = No , Polarity = Low , Phase = 0 , Clockrate = 128
+Config Spi = Hard , Interrupt = On , Data Order = Msb , Master = No , Polarity = Low , Phase = 0 
 ' Config Spi = Soft , Din = Pinb.4 , Dout = Portb.3 , Ss = Portb.2 , Clock = Portb.5 , Data_Order = Msb , Master = No , Setup = 40
 
 Spiinit
