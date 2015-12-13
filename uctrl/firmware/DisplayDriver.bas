@@ -87,8 +87,8 @@ Const Timer1_tenthsecondcount = 63973                       ' 65535 - 1563
 
 Dim Rbit As Bit
 Config Pinb.4 = Output                                      ' MISO
-' Config Spi = Hard , Interrupt = On , Data Order = Msb , Master = No       ', Polarity = Low , Phase = 0 , Clockrate = 128
-Config Spi = Soft , Din = Pinb.4 , Dout = Portb.3 , Ss = Portb.2 , Clock = Portb.5 , Setup = 40 , Polarity = Low , Phase = 1
+Config Spi = Hard , Interrupt = On , Data Order = Msb , Master = No , Polarity = Low , Phase = 0 , Clockrate = 128
+' Config Spi = Soft , Din = Pinb.4 , Dout = Portb.3 , Ss = Portb.2 , Clock = Portb.5 , Data_Order = Msb , Master = No , Setup = 40
 
 Spiinit
 
@@ -149,7 +149,7 @@ Const Digit_off = &H0A
 
 Spdr = 0                                                    ' start with sending 0 the first time
 Register(test_mode) = Disabled
-Register(power_mode) = Enabled
+Register(power_mode) = Disabled
 Register(digit_blink) = &H7F
 
 Digits(1) = 1
@@ -306,6 +306,4 @@ Spi_isr:
    pop r24
    !out sreg,r24 ; restore sreg
    pop r24       ; and the used register
-
-
 Return
