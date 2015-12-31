@@ -172,14 +172,11 @@ Do
    If Rbit = 1 Then
       Reset Rbit
       Spdr = Mosi
-      If Mosi = &HFF Then
-        Spi_idx = 0
-        Mosi = 0
-        Idx = 0
-      End If
-      If Spi_idx = 1 Then
+
+      If Mosi.7 = 1 Then
+         Idx = Mosi And &B00001111
+      Else
          Register(idx) = Mosi
-         Reset Spi_idx
          Select Case Idx
             Case Hours_10:
                Digits(1) = Register(idx)
@@ -247,9 +244,6 @@ Do
                End If
             Case Else
          End Select
-      Else
-         Idx = Mosi
-         Set Spi_idx
       End If
    End If
 Loop
@@ -304,35 +298,7 @@ Tenthsecondtimer_isr:
 
  Return
 
-
-
- '(
-Spi_isr1_on_hold:
-   push r24    ; save used register
-   in r24,sreg ; save sreg
-   push r24
-   Set Rbit                                                 ' we received something
-      If Spi_idx = 0 Then
-         Idx = Spdr
-         Set Spi_idx
-      Else
-         Register(idx) = Spdr
-         Reset Spi_idx
-      End If
-   pop r24
-   !out sreg,r24 ; restore sreg
-   pop r24       ; and the used register
-Return
-')
-
 Spi_isr:
- '  push r24    ; save used register
-  ' in r24,sreg ; save sreg
-'   push r24
    Set Rbit                                                 ' we received something
    Mosi = Spdr
-
-'   pop r24
-'   !out sreg,r24 ; restore sreg
- '  pop r24       ; and the used register
 Return
