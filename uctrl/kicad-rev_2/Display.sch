@@ -29,7 +29,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:clockModuleSymbols
-LIBS:ClockDisplayModule-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -968,13 +967,13 @@ F 3 "" H 7050 1750 60  0000 C CNN
 	1    7050 1750
 	-1   0    0    -1  
 $EndComp
-Text Label 1150 750  0    60   ~ 0
+Text Label 1100 750  0    60   ~ 0
 Seg_A
-Text Label 1200 1050 0    60   ~ 0
+Text Label 1100 1050 0    60   ~ 0
 Seg_B
-Text Label 1200 1600 0    60   ~ 0
+Text Label 1100 1600 0    60   ~ 0
 Seg_A
-Text Label 1200 1950 0    60   ~ 0
+Text Label 1100 1950 0    60   ~ 0
 Seg_B
 $Comp
 L CONN_01X06 P201

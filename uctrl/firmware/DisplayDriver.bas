@@ -72,7 +72,7 @@
 
 $regfile = "m88pdef.dat"
 $crystal = 1000000
-$hwstack = 40
+$hwstack = 64
 $swstack = 16
 $framesize = 32
 
@@ -86,13 +86,14 @@ On Timer1 Tenthsecondtimer_isr
 Const Timer1_tenthsecondcount = 63973                       ' 65535 - 1563
 
 Dim Rbit As Bit
-Config Pinb.4 = Output                                      ' MISO
-Config Spi = Hard , Interrupt = On , Data Order = Msb , Master = No , Polarity = Low , Phase = 0 
-' Config Spi = Soft , Din = Pinb.4 , Dout = Portb.3 , Ss = Portb.2 , Clock = Portb.5 , Data_Order = Msb , Master = No , Setup = 40
+Config Pinb.4 = Output
+Config Pinb.3 = Input                                       ' MISO
+Config Spi = Hard , Interrupt = On , Data Order = Msb , Master = No , Polarity = Low , Phase = 0       ' , Clockrate = 128
+' Config Spi = Soft , Din = Pinb.3 , Dout = Portb.4 , Ss = Portb.2 , Clock = Portb.5 , Setup = 40 , Mode = 1
 
 Spiinit
 
-On Spi Spi_isr Nosave
+On Spi Spi_isr                                              'Nosave
 
 Enable Timer0
 Enable Timer1
@@ -125,6 +126,9 @@ Dim Spi_d As Byte
 ' Dim Spi_data(2) As Byte
 Dim Spi_idx As Bit
 Dim Idx As Byte
+
+Dim Mosi As Byte
+
 Dim Register(16) As Byte
 Const Hours_10 = &H01                                       ' BCD value 0 - 2
 Const Hours_unit = &H02                                     ' BCD value 0 - 9
@@ -167,75 +171,85 @@ Reset Power_flag
 Do
    If Rbit = 1 Then
       Reset Rbit
+      Spdr = Mosi
+      If Mosi = &HFF Then
+        Spi_idx = 0
+        Mosi = 0
+        Idx = 0
+      End If
+      If Spi_idx = 1 Then
+         Register(idx) = Mosi
+         Reset Spi_idx
+         Select Case Idx
+            Case Hours_10:
+               Digits(1) = Register(idx)
+            Case Hours_unit:
+                Digits(2) = Register(idx)
+            Case Minutes_10:
+               Digits(3) = Register(idx)
+            Case Minutes_unit:
+               Digits(4) = Register(idx)
+            Case Colon:
+               ' This can not be the simple digit. This needs
+               ' to be interpreted 00 = off i.e. 0A etc etc.
+               If Register(idx) = 0 Then
+                  Digits(5) = &H0A
+               Else
+                  Digits(5) = 0
+               End If
+            Case Indicators:
+               ' This can not be the simple digit. This needs
+               ' to be interpreted 00 = off i.e. 0A etc etc.
+               'Digits(6) = Register(idx)
+               Select Case Register(idx)
+                  Case 00:
+                     Digits(6) = &H0A                       ' OFF
+                  Case 01:
+                     Digits(6) = 5                          ' Top
+                  Case 02:
+                     Digits(6) = 1                          ' Bottom
+                  Case 03
+                     Digits(6) = 0                          ' All
+                  Case Else
+                End Select
 
-   If Spi_idx = 0 Then
-      Select Case Idx
-         Case Hours_10:
-            Digits(1) = Register(idx)
-         Case Hours_unit:
-             Digits(2) = Register(idx)
-         Case Minutes_10:
-            Digits(3) = Register(idx)
-         Case Minutes_unit:
-            Digits(4) = Register(idx)
-         Case Colon:
-         ' This can not be the simple digit. This needs
-         ' to be interpreted 00 = off i.e. 0A etc etc.
-         If Register(idx) = 0 Then
-            Digits(5) = &H0A
-         Else
-            Digits(5) = 0
-         End If
-         Case Indicators:
-         ' This can not be the simple digit. This needs
-         ' to be interpreted 00 = off i.e. 0A etc etc.
-            Digits(6) = Register(idx)
-            Select Case Register(idx)
-               Case 00:
-                  Digits(6) = &H0A                          ' OFF
-               Case 01:
-                  Digits(6) = 5                             ' Top
-               Case 02:
-                  Digits(6) = 1                             ' Bottom
-               Case 03
-                  Digits(6) = 0                             ' All
-               Case Else
-            End Select
-
-         ' Case Intensity:
-         Case Power_mode:
-            If Register(idx) = 0 Then
-               Digits(1) = &H0A
-               Digits(2) = &H0A
-               Digits(3) = &H0A
-               Digits(4) = &H0A
-               Digits(5) = &H0A
-               Digits(6) = &H0A
-               Reset Power_flag
-            Else
-               Set Power_flag
-            End If
-         Case Digit_blink:
-             Blink_mask = Register(idx)
-         ' Case Blink_rate:
-         Case Test_mode:
-            If Register(idx) = Enabled Then
-               Digits(1) = 8
-               Digits(2) = 8
-               Digits(3) = 8
-               Digits(4) = 8
-               Digits(5) = 8
-               Digits(6) = 8
-            Else
-               Digits(1) = 0
-               Digits(2) = 0
-               Digits(3) = 0
-               Digits(4) = 0
-               Digits(5) = 0
-               Digits(6) = 0
-            End If
-         Case Else
-      End Select
+            ' Case Intensity:
+            Case Power_mode:
+               If Register(idx) = 0 Then
+                  Digits(1) = &H0A
+                  Digits(2) = &H0A
+                  Digits(3) = &H0A
+                  Digits(4) = &H0A
+                  Digits(5) = &H0A
+                  Digits(6) = &H0A
+                  Reset Power_flag
+               Else
+                  Set Power_flag
+               End If
+            Case Digit_blink:
+                Blink_mask = Register(idx)
+            ' Case Blink_rate:
+            Case Test_mode:
+               If Register(idx) = Enabled Then
+                  Digits(1) = 8
+                  Digits(2) = 8
+                  Digits(3) = 8
+                  Digits(4) = 8
+                  Digits(5) = 8
+                  Digits(6) = 8
+               Else
+                  Digits(1) = 0
+                  Digits(2) = 0
+                  Digits(3) = 0
+                  Digits(4) = 0
+                  Digits(5) = 0
+                  Digits(6) = 0
+               End If
+            Case Else
+         End Select
+      Else
+         Idx = Mosi
+         Set Spi_idx
       End If
    End If
 Loop
@@ -253,7 +267,8 @@ Renderdisplay_isr:                                          '50 Hz
 
    Digit = Position + 1
    Portd = &H0A                                             ' Swtich off the segments
-   Portc = Makebcd(position)
+   ' Portc = Makebcd(position)
+   Portc = Position
 
 
    Blink_test = &B00000001
@@ -291,7 +306,8 @@ Tenthsecondtimer_isr:
 
 
 
-Spi_isr:
+ '(
+Spi_isr1_on_hold:
    push r24    ; save used register
    in r24,sreg ; save sreg
    push r24
@@ -306,4 +322,17 @@ Spi_isr:
    pop r24
    !out sreg,r24 ; restore sreg
    pop r24       ; and the used register
+Return
+')
+
+Spi_isr:
+ '  push r24    ; save used register
+  ' in r24,sreg ; save sreg
+'   push r24
+   Set Rbit                                                 ' we received something
+   Mosi = Spdr
+
+'   pop r24
+'   !out sreg,r24 ; restore sreg
+ '  pop r24       ; and the used register
 Return
