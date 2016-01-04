@@ -80,10 +80,14 @@ Config Timer0 = Timer , Prescale = 256
 On Timer0 Renderdisplay_isr
 Const Timer0_count = 250                                    '200Hz For The Display
 
-
+'(
 Config Timer1 = Timer , Prescale = 64
 On Timer1 Tenthsecondtimer_isr
 Const Timer1_tenthsecondcount = 63973                       ' 65535 - 1563
+')
+Config Timer1 = Timer , Prescale = 8
+On Timer1 Tenthsecondtimer_isr
+Const Timer1_tenthsecondcount = 53036                       ' 65535 - 1563
 
 Dim Rbit As Bit
 Config Pinb.4 = Output
