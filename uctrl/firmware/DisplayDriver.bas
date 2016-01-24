@@ -87,7 +87,8 @@ Const Timer1_tenthsecondcount = 63973                       ' 65535 - 1563
 ')
 Config Timer1 = Timer , Prescale = 8
 On Timer1 Tenthsecondtimer_isr
-Const Timer1_tenthsecondcount = 53036                       ' 65535 - 1563
+' Const Timer1_tenthsecondcount = 53036                       ' 65535 - 1563
+Const Timer1_tenthsecondcount = 3036                       ' 2Hz
 
 Dim Rbit As Bit
 Config Pinb.4 = Output
@@ -124,7 +125,7 @@ Dim Blink_test As Byte
 
 Dim Power_flag As Bit
 
-Dim Tenthcount As Byte
+' Dim Tenthcount As Byte
 
 Dim Spi_d As Byte
 ' Dim Spi_data(2) As Byte
@@ -291,14 +292,14 @@ Return
 Tenthsecondtimer_isr:
    Timer1 = Timer1_tenthsecondcount
 
-   Incr Tenthcount
-   If Tenthcount = 5 Or Tenthcount = 10 Then                ' 0.5 Second
+   ' Incr Tenthcount
+   ' If Tenthcount = 5 Or Tenthcount = 10 Then                ' 0.5 Second
        Toggle Blink_flag
-   End If
+   ' End If
 
-   If Tenthcount > 9 Then                                   ' One Second
-      Tenthcount = 0
-   End If
+   ' If Tenthcount > 9 Then                                   ' One Second
+   '    Tenthcount = 0
+   ' End If
 
  Return
 
