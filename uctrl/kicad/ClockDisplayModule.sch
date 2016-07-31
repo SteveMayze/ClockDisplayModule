@@ -37,7 +37,7 @@ encoding utf-8
 Sheet 1 2
 Title "Clock display module"
 Date ""
-Rev "1.0"
+Rev "2L.5"
 Comp "Micro based, small display"
 Comment1 ""
 Comment2 ""
