@@ -25,6 +25,7 @@ Do
    For Digit = 0 To 5
      ' For Count = 0 To 5
          Portc = Digit
+         Portd = Makebcd(8)
          Waitms 1
      ' Next                                                  ' count
    Next                                                     ' digit

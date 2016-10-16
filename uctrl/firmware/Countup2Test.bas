@@ -25,7 +25,7 @@ Do
       Portd = Count                                         ' Segement A and B ON
       For Digit = 0 To 5
          Portc = Digit
-         Waitms 250
+         Waitms 500
       Next
                                                       ' digit
    Next                                                     ' count
